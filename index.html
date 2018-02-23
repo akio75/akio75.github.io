@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Roy alexandre</title>
+<style>
+body, html{  
+  background-color:black;
+  font-family:trebuchet MS, sans-serif;
+  letter-spacing: 1px;
+  height: 100%;
+  margin:0;
+}
+.back{
+  background-Image:url(background.jpg);
+  height: 100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+}
+
+#slide {  
+  position: absolute;
+  bottom:280px;
+  right:180px;
+  width: 680px;
+  height: 120px;
+  padding: 10px;
+}
+
+#slide > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+.text{
+  text-decoration: none!important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background:rgba(0,0,0,0.6);
+}
+
+.citation{
+  text-indent:35px;
+  color: white;  
+  opacity: 1;
+  font-size:1.5rem;
+  font-style:italic;
+  position:relative;
+  padding:10px 10px 10px 10px;
+}
+
+.author{
+  position: absolute;
+  right:-10px;
+  z-index: 5;
+  color: white;
+  padding:5px;
+  margin-top:-5px;
+}
+
+.contact{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 50px;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 318px;  
+}
+.contact-text{
+  text-align:center;
+  color:white;
+  font-weight:bold;
+  color:#FFFFFF;
+  padding:2px;
+}
+</style>
+</head>
+<body>
+<div class="back">
+<div id="slide">
+   <div>
+     <div class="text citation">"Le fossé séparant théorie et pratique est moins large en théorie qu’il ne l’est en pratique" </div>
+     <div class="text author"> Auteur Inconnu </div>
+   </div>
+   <div>
+     <div class="text citation">"Vous ne pouvez pas comprendre la récursivité sans avoir d’abord compris la récursivité."</div>
+     <div class="text author">  Auteur Inconnu </div>
+   </div>
+   <div>
+     <div class="text citation">"Neuf femmes ne peuvent pas faire un bébé en un mois."</div>
+     <div class="text author"> Fred Brooks </div>
+   </div>
+   <div>
+	 <div class="text citation">"Aujourd’hui, la programmation est devenue une course entre le développeur, qui s’efforce de produire de meilleures applications à l’épreuve des imbéciles et l’univers, qui s’efforce de produire de meilleurs imbéciles. Pour l’instant, l’univers a une bonne longueur d’avance"</div>
+	 <div class="text author">  Rich Cook</div>
+	</div>
+	<div>
+	 <div class="text citation">"J’ai toujours rêvé que mon ordinateur soit aussi simple à utiliser que mon téléphone. Ce rêve est devenu réalité : je ne comprends plus comment utiliser mon téléphone"</div>
+	 <div class="text author">  Bjarne Stroustrup </div>
+	</div>
+	<div>
+	 <div class="text citation">"Dans le monde il y a 10 types de personnes, ceux qui comprennent le binaire, et les autres"</div>
+	 <div class="text author">  Auteur inconnu</div>
+	</div>
+	<div>
+	 <div class="text citation">"Rien n'est impossible à celui qui n'a pas à le faire"</div>
+	 <div class="text author">  Auteur inconnu</div>
+	</div>
+	<div>
+	 <div class="text citation">"Mon ordinateur ne fait jamais ce que je veux. Il ne fait que ce que je lui demande"</div>
+	 <div class="text author">  Auteur inconnu</div>
+	</div>
+	<div>
+	 <div class="text citation">"Si vous ne réussissez pas du premier coup, appelez ça «version 1.0»"</div>
+	 <div class="text author">  Auteur inconnu</div>
+	</div>
+</div>  
+<div class="contact"><a class="text contact-text" href="mailto:contact@royalexandre.fr">Contact@RoyAlexandre.fr</a><span class="text contact-text"> - </span><a class="text contact-text" href="http://linkedin.com/in/alexandre-roy-46838676">LinkedIn</a></div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+$("#slide > div:gt(0)").hide();
+setInterval(function() {$('#slide > div:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#slide');}, 12000);
+</script>
+</body>
+
+</html>
